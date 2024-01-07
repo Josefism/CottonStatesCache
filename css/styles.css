@@ -1,0 +1,1107 @@
+/* ------------------------------------- Structure BEGIN */
+html, body {
+	margin: 0;
+	padding: 0;
+}
+/* ------------------------------------- Structure END */
+
+/* ------------------------------------- Fonts BEGIN */
+header h1, header h3, .intro-text, .caption {
+	font-family: 'Teko', sans-serif;
+}
+header h2, #nav-placeholder .snazzymenu .controls a {
+	font-family: 'Source Serif 4', serif;
+}
+p {
+    font-family: 'Nunito', sans-serif;
+}
+.material-icons {
+    font-family: 'Material Icons';
+}
+
+/* ------------------------------------- Fonts END */
+
+/* ------------------------------------- Header BEGIN */
+header {
+    position: relative;
+    display: flex;
+    height: 90vh;
+    color: #FFF;
+    background-color: #000;
+    padding: 0 0 50px 0;
+    background-image: url(/img/Green_3.jpg);
+    background-size: 125vw;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    animation: changeBgLargest 40s cubic-bezier(0.38, 0.01, 0.67, 0.99) infinite;
+}
+header a {
+    color: #FFF;
+    text-decoration: none;
+}
+header .site-title {
+    position: relative;
+    text-align: center;
+    text-shadow: 2px 2px 2px #000;
+}
+.portrait header {
+	height: 18vh;
+    padding: 50px 0 0 0;
+    justify-content: unset;
+}
+.hdr-col-2 .site-title.tournament-year {
+    font-size: 70px;
+    line-height: 1;
+    margin: 0;
+}
+.portrait .hdr-col-2 .site-title.tournament-year {
+    font-size: 30px;
+}
+.hdr-col-2 .site-title.main-title {
+    font-size: 50px;
+    line-height: 1;
+    margin: 0;
+}
+.portrait .hdr-col-2 .site-title.main-title {
+    font-size: 20px;
+}
+.hdr-col-2 .site-title.sub-title {
+    font-size: 40px;
+    margin: 0;
+}
+.portrait .hdr-col-2 .site-title.sub-title {
+    font-size: 15px;
+}
+.header-logo.hdr-col-1 {
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+header .hdr-col-2 {
+    position: relative;
+    padding: 50px 0 0 0;
+}
+.header-logo.hdr-col-3 {
+    position: relative;
+}
+.portrait .header-logo.hdr-col-1 {
+    position: relative;
+    width: 75px;
+    height: 75px;
+}
+.portrait header .hdr-col-2 {
+    position: relative;
+    padding: 0;
+}
+.portrait .header-logo.hdr-col-3 {
+    position: relative;
+    width: 75px;
+    height: 75px;
+}
+/* ------------------------------------- Header END */
+
+/* ------------------------------------- Navigation BEGIN */
+#nav-placeholder {
+    width: 100%;
+    position: absolute;
+    bottom: 55px;
+	z-index: 500;
+}
+#nav-placeholder .snazzymenu.dark {
+    background: rgb(10 110 8 / 100%);
+}
+#nav-placeholder .snazzymenu.dark.desktop .menu {
+    background: rgb(50 60 65);
+    top: 36px;
+    padding: 0;
+}
+#nav-placeholder .menu-item {
+    list-style: none;
+}
+#nav-placeholder .menu-item a {
+    text-decoration: none;
+}
+.landscape #nav-placeholder .snazzymenu {
+	display: block;
+}
+.landscape #nav-placeholder .snazzymenu.dark.desktop .menu.open > li.active > a {
+    color: hsl(127deg 100% 50% / 60%);
+}
+.landscape #nav-placeholder .snazzymenu .controls a {
+    text-decoration: none;
+    font-size: 20px;
+}
+.landscape #nav-placeholder .snazzymenu .controls .logo a {
+	z-index: 500;
+}
+#nav-placeholder .menu-item span {
+    display: block;
+    text-align: center;
+    padding: 10px 0 0 0;
+    font-size: 50px;
+}
+#nav-placeholder .snazzymenu .menu-toggle {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0;
+    width: 60px;
+}
+#nav-placeholder .snazzymenu .menu-toggle:before {
+    bottom: 20px;
+}
+#nav-placeholder .snazzymenu .menu-toggle:after {
+    top: 20px;
+}
+#nav-placeholder .snazzymenu .menu-toggle.active {
+    font-size: 0px;
+    font-weight: 700;
+    padding: 0;
+}
+#nav-placeholder .snazzymenu .menu-toggle.active:before {
+    bottom: 0;
+}
+#nav-placeholder .snazzymenu .menu-toggle.active:after {
+    top: 0;
+}
+.landscape #nav-placeholder .mobile-nav {
+	display: none;
+}
+.landscape #mobileMenuHolder,
+.landscape #mobileMenuOverlay {
+	display: none;
+}
+.entries-closed {
+	cursor: not-allowed;
+}
+/* ------------------------------------- Navigation END */
+
+/* ------------------------------------- Mobile Navigation BEGIN */
+.portrait #nav-placeholder {
+	bottom: unset;
+}
+.portrait #mobileMenuHolder.active {
+	position: absolute;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    top: 44px;
+    left: 0;
+    z-index: 10;
+}
+.portrait #mobileMenuHolder.active #mobileMenuOverlay {
+	position: absolute;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(10 110 8 / 85%);
+}
+.portrait #mobileMenuHolder.inactive,
+.portrait #mobileMenuHolder.inactive #menu-main-nav,
+.portrait #mobileMenuOverlay.inactive {
+	display: none;
+}
+.portrait #mobileMenuHolder #menu-main-nav {
+	position: absolute;
+}
+.portrait #mobileMenuHolder.active,
+.portrait #mobileMenuHolder.active #mobileMenuOverlay,
+.portrait #mobileMenuHolder.active #menu-main-nav {
+	display: block;
+	position: fixed;
+}
+.portrait #mobileMenuHolder.active #menu-main-nav {
+	z-index: 50;
+	width: 100vw;
+    padding: 5vh 0;
+}
+.portrait #mobileMenuHolder.active #menu-main-nav li {
+	width: 100%;
+	text-align: center;
+	display: block;
+	padding: 10px 0;
+	margin: 0 auto;
+	list-style: none;
+}
+.portrait #mobileMenuHolder.active #menu-main-nav li a {
+    color: #FFF;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'arial', 'sans-serif';
+    text-decoration: none;
+}
+.portrait #mobileMenuHolder.active #menu-main-nav li a span {
+    font-size: 25px;
+    vertical-align: text-top;
+    padding-right: 20px;
+    color: #CCC;
+}
+.portrait #nav-placeholder .mobile-nav {
+	display: block;
+    position: fixed;
+    width: 100vw;
+    height: 45px;
+    top: 0;	background-color: rgb(10 110 8 / 85%);
+}
+.portrait #nav-placeholder .mobile-nav .entry-form-btn {
+    float: left;
+    position: relative;
+    top: 5px;
+    left: 10px;
+    font-size: 21px;
+}
+.portrait #nav-placeholder .mobile-nav .entry-form-btn svg {
+	position: relative;
+    top: 4px;
+    fill: #FFF;
+    height: 25px;
+    width: 25px;
+}
+.portrait #nav-placeholder .mobile-nav .entry-form-btn .material-icons.external-link {
+    font-size: 16px;
+}
+.portrait #nav-placeholder .mobile-nav .menu-trigger {
+    float: right;
+    position: relative;
+    top: 9px;
+    right: 10px;
+}
+.portrait #nav-placeholder .mobile-nav .menu-trigger .menu-btn {
+    background-color: transparent;
+    color: #FFF;
+    font-size: 16px;
+    border-color: #FFF;
+    border-style: solid;
+    border-left: none;
+    border-right: none;
+    border-width: 3px;
+    padding-top: 2px;
+}
+.portrait #nav-placeholder .mobile-nav .menu-trigger .menu-btn.close-btn {
+	border-top: none;
+	border-bottom: none;
+}
+
+/* Only takes effect when jQuery moves .snazzymenu element to direct child of <body> */
+body > .snazzymenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #006600CC;
+    z-index: 60000;
+}
+body > .snazzymenu .menu.portrait {
+    display: block;
+}
+.portrait .snazzymenu.inactive {
+	display: none;
+}
+
+/* ------------------------------------- Mobile Navigation END */
+
+/* ------------------------------------- Content BEGIN */
+.content {
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 0;
+    color: #000;
+    background-color: #FFF;
+}
+.page-section {
+    position: relative;
+    width: 100%;
+}
+.page-section-1, .page-section-2, .page-section-3 {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+.page-section-1 .focusarea, .page-section-2 .focusarea,
+.page-section-3 .focusarea {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    left: 0;
+}
+.page-section-1 .focusarea .section-inner-wrap, .page-section-2 .focusarea .section-inner-wrap,
+.page-section-3 .focusarea .section-inner-wrap {
+    padding: 30px 20px;
+}
+.page-section-1 .sidebar, .page-section-2 .sidebar,
+.page-section-3 .sidebar {
+    position: relative;
+    display: inline-block;
+    right: 0;
+}
+.page-section-1 .sidebar .section-inner-wrap, .page-section-2 .sidebar .section-inner-wrap,
+.page-section-3 .sidebar .section-inner-wrap {
+    padding: 30px 20px 30px 0;
+}
+.portrait .focusarea img {
+    max-width: 90vw;
+}
+.portrait .sidebar .section-inner-wrap {
+    padding: 0 20px;
+}
+/* ------------------------------------- Content BEGIN */
+
+/* ------------------------------------- Homepage BEGIN */
+.homepage .page-section-1 .focusarea {
+    position: relative;
+    display: inline-block;
+    width: 59vw;
+    text-align: center;
+    left: 0;
+}
+.homepage .page-section-1 .focusarea .section-inner-wrap {
+    padding: 0 20px;
+}
+.homepage .page-section-1 .sidebar {
+    position: relative;
+    display: inline-block;
+    width: 39vw;
+    text-align: left;
+    right: 0;
+}
+.homepage .page-section-1 .sidebar .section-inner-wrap {
+    padding: 20px 20px 0 0;
+}
+.homepage .page-section-2 .focusarea,
+.homepage .page-section-3 .focusarea {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    left: 0;
+}
+.homepage .page-section-2 .focusarea .section-inner-wrap,
+.homepage .page-section-3 .focusarea .section-inner-wrap {
+    padding: 30px 20px;
+}
+.homepage .page-section-2 .focusarea {
+    background-color: #c5c5c5;
+    color: #000;
+}
+.homepage .page-section-2 .sidebar {
+    background-color: #006600;
+    color: #FFF;
+}
+.homepage .page-section-2 .sidebar .section-inner-wrap {
+    padding: 20px;
+}
+.homepage .page-section-2 .focusarea .third-party-logos {
+    width: 100%;
+    text-align: center;
+    margin-bottom:30px;
+}
+.homepage .page-section-2 .focusarea .third-party-logos a {
+    display: inline-block;
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
+}
+.homepage .page-section-3 {
+    background-color: #9dff9d;
+}
+.portrait .page-section-1,
+.portrait .page-section-2 {
+    display: inline-flex;
+    flex-direction: column;
+}
+.portrait .page-section-1 .focusarea,
+.portrait .page-section-1 .sidebar,
+.portrait .page-section-2 .focusarea,
+.portrait .page-section-2 .sidebar {
+    width: 100vw;
+}
+.portrait.homepage .page-section-1 .sidebar .section-inner-wrap {
+    padding: 0 10px;
+}
+.portrait.homepage .page-section-2 .focusarea .section-inner-wrap,
+.portrait.homepage .page-section-2 .sidebar .section-inner-wrap {
+    padding: 20px;
+}
+.highlights-btn button {
+    background-color: transparent;
+    border-color: #000;
+    padding: 5px 15px;
+    color: #000;
+    font-family: 'Teko';
+    font-size: 24px;
+    cursor: pointer;
+}
+.area-hotels {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.area-hotels p {
+    padding: 5px;
+    text-align: center;
+}
+/* ------------------------------------- Homepage END */
+
+/* ------------------------------------- Pages BEGIN */
+.intro-text {
+    display: inline;
+    font-size: 36px;
+    line-height: 1;
+}
+p {
+    font-size: 20px;
+}
+.heading-text {
+    font-size: 30px;
+    font-family: 'Teko', sans-serif;
+    line-height: 1;
+    margin: 25px 0 0 0;
+}
+.course-page .page-section-2 {
+    flex-direction: column;
+    align-content: space-around;
+}
+.hole-block {
+    max-width: 50vw;
+    background-color: green;
+    padding: 0 10px 20px 25px;
+    margin: 0 auto 20px auto;
+    border-radius: 10px;
+    border: 5px solid #b7b7b7;
+}
+.hole-block h2 {
+    color: #FFFFFF;
+    font-size: 60px;
+    line-height: 1;
+    margin: 20px 0 10px 0;
+    font-family: 'Nunito', sans-serif;
+}
+.hole-block h3 {
+    color: #FFFFFF;
+    font-size: 30px;
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+}
+.hole-block p {
+    color: #FFFFFF;
+    margin: 10px 0 20px 0;
+}
+.hole-block img {
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    border: 5px solid #FFF;
+}
+.portrait .hole-block {
+    max-width: 80vw;
+    padding: 0 10px 20px;
+}
+.portrait .hole-block h2 {
+    font-size: 30px;
+    margin: 20px 0 0 0;
+}
+.portrait .hole-block h3 {
+    font-size: 20px;
+}
+.portrait .hole-block img {
+    max-width: 75vw;
+}
+.champ-note {
+    color: #a9a9a9;
+    font-style: italic;
+}
+.testimonial-block {
+    border: 3px solid #333;
+    border-radius: 10px;
+    padding: 0 20px 10px;
+    margin-bottom: 20px;
+    background-color: #EEE;
+}
+.attrib-block img {
+    border: 3px solid #444;
+    border-radius: 10px;
+}
+.attrib-block ul {
+    display: inline-block;
+    vertical-align: top;
+}
+.material-icons.external-link {
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFFAA;
+}
+.sponsor-logos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.sponsor-logos img {
+    max-width: 26vw;
+    max-height: 200px;
+    margin: 5px;
+}
+.sponsor-logos img.banner {
+    max-width: 95vw;
+    max-height: 300px;
+    margin: 5px;
+}
+.sponsors-page .page-section-3 .sidebar {
+    padding: 30px 10px 30px 20px;
+}
+.history-page.portrait .focusarea img {
+    width: 65vw;
+}
+.portrait .ui-tabs {
+    padding: 0;
+}
+.portrait .ui-tabs .ui-tabs-nav {
+    padding: 0;
+}
+.portrait .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    padding: 0.3em;
+    font-size: 14px;
+}
+#playersFieldTable th.sorted.ascending:after {
+	content: " \2191";
+}
+#playersFieldTable th.sorted.descending:after {
+	content: " \2193";
+}
+.field-page .page-section-1 .focusarea .section-inner-wrap table {
+    margin: 0 auto;
+    width: 70vw;
+}
+.field-page .page-section-1 .focusarea .section-inner-wrap table th {
+    font-family: 'Teko';
+    font-size: 24px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+	padding: 0 4px;
+}
+.field-page .page-section-1 .focusarea .section-inner-wrap table tbody tr:hover {
+    background-color: #fe810063;
+    cursor: default;
+}
+.field-page .page-section-1 .focusarea .section-inner-wrap table td:nth-of-type(1),
+.field-page .page-section-1 .focusarea .section-inner-wrap table td:nth-of-type(2),
+.field-page .page-section-1 .focusarea .section-inner-wrap table td:nth-of-type(3) {
+    padding-left: 10px;
+}
+.field-page .page-section-1 .focusarea .section-inner-wrap table td:nth-of-type(4),
+.field-page .page-section-1 .focusarea .section-inner-wrap table td:nth-of-type(5) {
+    text-align: center;
+}
+.field-page .page-section-1 .focusarea .section-inner-wrap table td {
+    font-family: 'Nunito';
+    font-size: 20px;
+}
+
+/* ------------------------------------- Pages END */
+
+/* ------------------------------------- Footer BEGIN */
+#footer-placeholder {
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: #545454;
+    color: #FFFFFF;
+}
+#footer-placeholder .footer {
+    padding: 10px 20px;
+}
+.footer-dates, .footer-dates-label,
+.footer-names, .footer-names-label,
+.footer-reg-btn {
+    text-align: center;
+}
+.footer-widgets {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.footer-dates-label, .footer-names-label {
+    margin-block-end: 0;
+}
+.footer-dates, .footer-names {
+    margin-block-start: 0;
+}
+.footer-reg-btn button, .sponsors-btn button {
+    background-color: transparent;
+    border-color: #FFF;
+    padding: 5px 15px;
+    color: #FFF;
+    font-family: 'Teko';
+    font-size: 24px;
+    cursor: pointer;
+}
+.footer-col-2 a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.portrait .footer-col-2 p {
+    text-align: center;
+}
+.portrait .footer-col-2 p strong {
+    display: block;
+}
+.portrait .footer-col-2 p a {
+    text-decoration: underline;
+}
+/* ------------------------------------- Footer END */
+
+/* ------------------------------------- Super Simple Slider BEGIN */
+.sss {
+	height: 0;
+	margin: 0; 
+	padding: 0;
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+
+.ssslide {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	overflow: hidden;
+}
+
+.ssslide img {
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	display: block;
+}
+
+.sssnext, .sssprev {
+	width: 25px;
+	height: 100%;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	background: url('../img/arr.png') no-repeat;
+}
+
+.sssprev {
+	left: 3%;
+	background-position: 0 50%;
+}
+
+.sssnext {
+	right: 3%;
+	background-position: -26px 50%;
+}
+
+.sssprev:hover, .sssnext:hover {
+	cursor: pointer;
+}
+
+.caption {
+	font-size: 20px;
+}
+    
+/* ------------------------------------- Super Simple Slider END */
+/* ------------------------------------- Media Queries BEGIN */
+/* ------------------------ 1200px BEGIN */
+@media only screen and (max-width: 1200px) {
+	header {
+		height: 85vh;
+	    animation: changeBg1200 40s cubic-bezier(0.38, 0.01, 0.67, 0.99) infinite;
+	}
+}
+/* ------------------------ 1200px END */
+
+/* ------------------------ 1023px BEGIN */
+@media only screen and (max-width: 1023px) {
+    .page-section-1, .page-section-2 {
+        flex-direction: column;
+    }
+    .page-section-1 .focusarea, .page-section-2 .focusarea,
+    .page-section-3 .focusarea,  .homepage .page-section-1 .sidebar {
+        width: unset;
+		padding: 20px 20px 0 20px;
+
+    }
+    .homepage .page-section-1 .focusarea {
+        margin: 0 auto;
+    }
+	header {
+		height: 55vh;
+		background-size: 150vw;
+	    animation: changeBg1023 40s cubic-bezier(0.38, 0.01, 0.67, 0.99) infinite;
+	}
+	.caption {
+		font-size: 14px;
+	}
+	.field-page .page-section-1 .focusarea .section-inner-wrap table th {
+		font-size: 18px;
+	}
+	.field-page .page-section-1 .focusarea .section-inner-wrap table td {
+		font-size: 14px;
+	}
+}
+/* ------------------------ 1023px END */
+
+/* ------------------------ 900px BEGIN */
+@media only screen and (max-width: 900px) {
+    header {
+        flex-wrap: wrap;
+	    animation: changeBg900 40s cubic-bezier(0.38, 0.01, 0.67, 0.99) infinite;
+    }
+    .header-logo.hdr-col-1, .header-logo.hdr-col-3 {
+        order: 2;
+        width: 150px;
+        height: 150px;
+    }
+    header .hdr-col-2 {
+        order: 1;
+    }
+    .hdr-col-2 .site-title.tournament-year {
+        font-size: 50px;
+    }
+    .hdr-col-2 .site-title.main-title {
+        font-size: 30px;
+    }
+    .hdr-col-2 .site-title.sub-title {
+        font-size: 30px;
+    }
+}
+/* ------------------------ 900px END */
+
+/* ------------------------ 800px BEGIN */
+@media only screen and (max-width: 800px) {
+    header {
+        background-size: 150vw;
+        height: 45vh;
+	    animation: changeBg800 40s cubic-bezier(0.38, 0.01, 0.67, 0.99) infinite;
+		flex-wrap: unset;
+    }
+    header .hdr-col-2 {
+        padding: 0 10vw;
+    }
+    .footer-widgets {
+        display: inline-flex;
+        justify-content: normal;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+    }
+    .footer-widgets a {
+        font-size: smaller;
+    }
+    .footer-col-2 {
+        text-align: center;
+    }
+}
+/* ------------------------ 800px END */
+
+/* ------------------------ 768px BEGIN */
+@media only screen and (max-width: 768px) {
+	header {
+		flex-wrap: revert;
+	    animation: changeBg768 40s cubic-bezier(0.38, 0.01, 0.67, 0.99) infinite;
+	}
+	.header-logo.hdr-col-1, .header-logo.hdr-col-3 {
+		width: 150px;
+		height: 150px;
+	}
+	.portrait .header-logo.hdr-col-1, .portrait .header-logo.hdr-col-3 {
+		width: 75px;
+		height: 75px;
+	}
+	.hdr-col-2 .site-title.tournament-year {
+		font-size: 40px;
+	}
+	.portrait .hdr-col-2 .site-title.tournament-year {
+		font-size: 18px;
+	}
+	.hdr-col-2 .site-title.main-title {
+		font-size: 24px;
+	}
+	.portrait .hdr-col-2 .site-title.main-title {
+		font-size: 15px;
+	}
+	.hdr-col-2 .site-title.sub-title {
+		font-size: 24px;
+	}
+	.portrait .hdr-col-2 .site-title.sub-title {
+		font-size: 18px;
+	}
+	.snazzymenu.mobile .menu.open {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		width: 80vw;
+	}
+}
+/* ------------------------ 768px END */
+
+/* ------------------------ 600px BEGIN */
+@media only screen and (max-width: 600px) {
+	.portrait header {
+		height: 18vh;
+		animation: changeBg600 40s cubic-bezier(0.38, 0.01, 0.67, 0.99) infinite;
+	}
+	.landscape header .hdr-col-2 {
+		padding: 0 5vw;
+	}
+	.field-page .page-section-1 .focusarea .section-inner-wrap table th {
+		font-size: 13px;
+	}
+	.field-page .page-section-1 .focusarea .section-inner-wrap table td {
+		font-size: 11px;
+	}
+}
+/* ------------------------ 600px END */
+
+/* ------------------------ 400px BEGIN */
+@media only screen and (max-width: 400px) {
+	.portrait header {
+		height: 17vh;
+		animation: changeBg400 40s cubic-bezier(0.38, 0.01, 0.67, 0.99) infinite;
+	}
+}
+/* ------------------------ 400px END */
+
+/* ------------------------------------- Media Queries END */
+
+/* ------------------------------------- Animation Keyframes BEGIN */
+@keyframes changeBgLargest {
+	0%, 100% {
+		background-image: url(/img/BDCC_Front_Gate.png);
+		background-size: 155vw;
+		background-position: 20% 0px;
+	}
+	20% {
+		background-image: url(/img/BDCC_Clubhouse.png);
+		background-size: 137vw;
+		background-position: 0px 0px;
+	}
+	40% {
+		background-image: url(/img/BDCC_Green_2.png);
+		background-size: 146vw;
+		background-position: 50% 50%;
+	}
+	60% {
+		background-image: url(/img/Green_3.jpg);
+		background-size: 125vw;
+		background-position: 50% 50%;
+	}
+	80% {
+		background-image: url(/img/FairwayAndGreen_14.jpg);
+		background-size: 125vw;
+		background-position: 50% 0%;
+	}
+}
+@keyframes changeBg1200 {
+	0%, 100% {
+		background-image: url(/img/BDCC_Front_Gate.png);
+		background-size: 185vw;
+		background-position: 20% 0px;
+	}
+	20% {
+		background-image: url(/img/BDCC_Clubhouse.png);
+		background-size: 157vw;
+		background-position: 0px 0px;
+	}
+	40% {
+		background-image: url(/img/BDCC_Green_2.png);
+		background-size: 165vw;
+		background-position: 50% 50%;
+	}
+	60% {
+		background-image: url(/img/Green_3.jpg);
+		background-size: 145vw;
+		background-position: 50% 50%;
+	}
+	80% {
+		background-image: url(/img/FairwayAndGreen_14.jpg);
+		background-size: 135vw;
+		background-position: 50% 0%;
+	}
+}
+@keyframes changeBg1023 {
+	0%, 100% {
+		background-image: url(/img/BDCC_Front_Gate.png);
+		background-size: 135vw;
+		background-position: 20% 0px;
+	}
+	20% {
+		background-image: url(/img/BDCC_Clubhouse.png);
+		background-size: 105vw;
+		background-position: 0px 0px;
+	}
+	40% {
+		background-image: url(/img/BDCC_Green_2.png);
+		background-size: 146vw;
+		background-position: 50% 50%;
+	}
+	60% {
+		background-image: url(/img/Green_3.jpg);
+		background-size: 125vw;
+		background-position: 50% 50%;
+	}
+	80% {
+		background-image: url(/img/FairwayAndGreen_14.jpg);
+		background-size: 125vw;
+		background-position: 50% 0%;
+	}
+}
+@keyframes changeBg900 {
+	0%, 100% {
+		background-image: url(/img/BDCC_Front_Gate.png);
+		background-size: 155vw;
+		background-position: 20% 0px;
+	}
+	20% {
+		background-image: url(/img/BDCC_Clubhouse.png);
+		background-size: 137vw;
+		background-position: 0px 0px;
+	}
+	40% {
+		background-image: url(/img/BDCC_Green_2.png);
+		background-size: 146vw;
+		background-position: 50% 50%;
+	}
+	60% {
+		background-image: url(/img/Green_3.jpg);
+		background-size: 125vw;
+		background-position: 50% 50%;
+	}
+	80% {
+		background-image: url(/img/FairwayAndGreen_14.jpg);
+		background-size: 125vw;
+		background-position: 50% 0%;
+	}
+}
+@keyframes changeBg800 {
+	0%, 100% {
+		background-image: url(/img/BDCC_Front_Gate.png);
+		background-size: 155vw;
+		background-position: 20% 0px;
+	}
+	20% {
+		background-image: url(/img/BDCC_Clubhouse.png);
+		background-size: 137vw;
+		background-position: 0px 0px;
+	}
+	40% {
+		background-image: url(/img/BDCC_Green_2.png);
+		background-size: 146vw;
+		background-position: 50% 50%;
+	}
+	60% {
+		background-image: url(/img/Green_3.jpg);
+		background-size: 125vw;
+		background-position: 50% 50%;
+	}
+	80% {
+		background-image: url(/img/FairwayAndGreen_14.jpg);
+		background-size: 125vw;
+		background-position: 50% 0%;
+	}
+}
+@keyframes changeBg768 {
+	0%, 100% {
+		background-image: url(/img/BDCC_Front_Gate.png);
+		background-size: 155vw;
+		background-position: 20% 0px;
+	}
+	20% {
+		background-image: url(/img/BDCC_Clubhouse.png);
+		background-size: 137vw;
+		background-position: 0px 0px;
+	}
+	40% {
+		background-image: url(/img/BDCC_Green_2.png);
+		background-size: 146vw;
+		background-position: 50% 50%;
+	}
+	60% {
+		background-image: url(/img/Green_3.jpg);
+		background-size: 125vw;
+		background-position: 50% 50%;
+	}
+	80% {
+		background-image: url(/img/FairwayAndGreen_14.jpg);
+		background-size: 125vw;
+		background-position: 50% 0%;
+	}
+}
+@keyframes changeBg600 {
+	0%, 100% {
+		background-image: url(/img/BDCC_Front_Gate.png);
+		background-size: 155vw;
+		background-position: 20% 0px;
+	}
+	20% {
+		background-image: url(/img/BDCC_Clubhouse.png);
+		background-size: 137vw;
+		background-position: 0px 0px;
+	}
+	40% {
+		background-image: url(/img/BDCC_Green_2.png);
+		background-size: 146vw;
+		background-position: 50% 50%;
+	}
+	60% {
+		background-image: url(/img/Green_3.jpg);
+		background-size: 125vw;
+		background-position: 50% 50%;
+	}
+	80% {
+		background-image: url(/img/FairwayAndGreen_14.jpg);
+		background-size: 125vw;
+		background-position: 50% 0%;
+	}
+}
+@keyframes changeBg400 {
+	0%, 100% {
+		background-image: url(/img/BDCC_Front_Gate.png);
+		background-size: 155vw;
+		background-position: 20% 0px;
+	}
+	20% {
+		background-image: url(/img/BDCC_Clubhouse.png);
+		background-size: 137vw;
+		background-position: 0px 0px;
+	}
+	40% {
+		background-image: url(/img/BDCC_Green_2.png);
+		background-size: 146vw;
+		background-position: 50% 50%;
+	}
+	60% {
+		background-image: url(/img/Green_3.jpg);
+		background-size: 125vw;
+		background-position: 50% 50%;
+	}
+	80% {
+		background-image: url(/img/FairwayAndGreen_14.jpg);
+		background-size: 125vw;
+		background-position: 50% 0%;
+	}
+}
+
+/* ------------------------------------- Animation Keyframes END */
